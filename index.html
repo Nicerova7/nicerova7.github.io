@@ -186,33 +186,29 @@ layout: default
 <div class="docs-section" id="projects">
   <h4>Projects</h4>
 
-  <div class="tab-content">
-    <div class="tab-pane active" id="projects-selected">
-      {% assign selected_projects = site.data.projects.projects | where: "selected", "y" %}
-      {% for project in selected_projects %}
-        {% assign index_modulo = forloop.index0 | modulo:2 %}
-        {% if index_modulo == 0 %}
-          <div class="row">
-        {% endif %}
+  {% assign selected_projects = site.data.projects.projects | where: "selected", "y" %}
+  {% for project in selected_projects %}
+    {% assign index_modulo = forloop.index0 | modulo:2 %}
+    {% if index_modulo == 0 %}
+      <div class="row">
+    {% endif %}
 
-          <div class="six columns">
-            <div class="project-container">
-              <div class="project-caption">
-                <b>{{ project.title }}</b><br/>
-                {{ project.subtitle }}
-                {% if project.url %}
-                  <br/><a href="{{ project.url }}" target="_blank">Learn more</a>
-                {% endif %}
-              </div>
-            </div>
+      <div class="six columns">
+        <div class="project-container">
+          <div class="project-caption">
+            <b>{{ project.title }}</b><br/>
+            {{ project.subtitle }}
+            {% if project.url %}
+              <br/><a href="{{ project.url }}" target="_blank">Learn more</a>
+            {% endif %}
           </div>
+        </div>
+      </div>
 
-        {% if index_modulo == 1 or forloop.last %}
-          </div>
-        {% endif %}
-      {% endfor %}
-    </div>
-  </div>
+    {% if index_modulo == 1 or forloop.last %}
+      </div> <!-- Cierra la fila -->
+    {% endif %}
+  {% endfor %}
 </div>
 
 
