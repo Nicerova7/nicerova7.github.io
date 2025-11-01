@@ -86,17 +86,25 @@
 .direction-l .flag:before,
 .direction-r .flag:before {
   position: absolute;
-  top: 50%;
-  right: -40px;
+  top: 0;
+  bottom: 0;
+  margin: auto;
   content: ' ';
   display: block;
   width: 12px;
   height: 12px;
-  margin-top: -10px;
   background: #fff;
   border-radius: 10px;
   border: 4px solid rgb(255,80,80);
   z-index: 10;
+}
+
+.direction-l .flag:before {
+  right: -40px;
+}
+
+.direction-r .flag:before {
+  left: -40px;
 }
 
 .direction-r .flag:before {
@@ -306,19 +314,4 @@
   .direction-r .desc {
     margin: 1em 4em 0 4em;
   }
-}
-
-/* === Fix misalignment of timeline dots for multiline titles === */
-.direction-l .flag:before,
-.direction-r .flag:before {
-  top: 25px !important;     /* fuerza el punto a quedar alineado verticalmente */
-  margin-top: 0 !important;
-}
-
-.direction-l .flag:before {
-  right: -35px !important;  /* centra horizontalmente sobre la línea */
-}
-
-.direction-r .flag:before {
-  left: -35px !important;   /* centra horizontalmente sobre la línea */
 }
