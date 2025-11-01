@@ -1,15 +1,15 @@
 experiences:
 
-- place: "Institut Polytechnique de Paris"
-  time: "Jun. 2025"
-  title: "Master's in Data and Artificial Intelligence"
-  subtitle: "Admitted to the M1 program in Computer Science, specialization in Data and AI (Admission for 2025-2027)"
-  category: "school"
-
 - place: "Technical University of Munich (TUM)"
   time: "Aug, 2025"
   title: "M.Sc. in Informatics"
   subtitle: "Admitted to the Master's program in Informatics at the Technical University of Munich (Admission for 2026-2028)"
+  category: "school"
+
+- place: "Institut Polytechnique de Paris"
+  time: "Jun. 2025"
+  title: "Master's in Data and Artificial Intelligence"
+  subtitle: "Admitted to the M1 program in Computer Science, specialization in Data and AI (Admission for 2025-2027)"
   category: "school"
 
 - place: "PhawAI"
