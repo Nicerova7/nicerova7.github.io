@@ -307,3 +307,18 @@
     margin: 1em 4em 0 4em;
   }
 }
+
+/* === Fix misalignment of timeline dots for multiline titles === */
+.direction-l .flag:before,
+.direction-r .flag:before {
+  top: 25px !important;     /* fuerza el punto a quedar alineado verticalmente */
+  margin-top: 0 !important;
+}
+
+.direction-l .flag:before {
+  right: -35px !important;  /* centra horizontalmente sobre la línea */
+}
+
+.direction-r .flag:before {
+  left: -35px !important;   /* centra horizontalmente sobre la línea */
+}
